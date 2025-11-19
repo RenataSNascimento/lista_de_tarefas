@@ -8,3 +8,8 @@ class TaskAdmin(admin.ModelAdmin):
     list_display = ('titulo','descricao','usuario')
     list_filter = ('concluida','prioridade',)
     search_fields = ('titulo',)
+    
+    
+    
+    
+#teste
