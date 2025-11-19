@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+
+{% block title%}Minhas tarefas{% endblock %}
+
+{% block content %}
+
+{%for task in tarefas%} 
+    {{ task.titulo}}
+    {{ task.descricao}} 
+    {{ task.prioridade}} 
+    {{ task.data_limite}}
+   
+
+{% endfor %}
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Título</th>
+      <th scope="col">Descrição</th>
+      <th scope="col">Prioridade</th>
+      <th scope="col">Data</th>
+    </tr>
+  
+    
+    {%for task in tarefas%}
+    
+    <tr>
+    <td> {{ task.id }} </td>   
+    <td> {{ task.titulo }} </td>
+    <td>{{ task.descricao }} </td>
+    <td>{{ task.prioridade }} </td>
+    <td>{{task.data_limite}} </td>
+    
+
+    </tr>
+{% endfor %}
+
+    
+</thead>
+  <tbody>
+  
+
+{% endblock %}
+
+
+
+
